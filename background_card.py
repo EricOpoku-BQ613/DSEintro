@@ -1,9 +1,13 @@
+from typing import List, Dict
+
 
 # Name: Eric Opoku
 # Fun fact: I built a cocoa‑bean grading AI that won an award in Ghana.
 # Course: DSE511 — Background Script
 
 
+from dataclasses import dataclass
+from typing import List, Dict
 
 @dataclass
 class Profile:
@@ -66,7 +70,7 @@ def main():
             "Resource‑aware multimodal AI",
         ],
         skills={
-            "Python": 9, "R": 8, "SQL": 8, "PyTorch": 8, "Data Viz": 7
+            "Python": 7, "R": 6, "SQL": 8, "PyTorch": 6, "Data Viz": 7
         },
         goals=[
             "Publish reproducible research with clear model cards",
