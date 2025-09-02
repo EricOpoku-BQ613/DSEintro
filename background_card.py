@@ -5,13 +5,14 @@ from typing import List, Dict
 # Fun fact: I built a cocoa‑bean grading AI that won an award in Ghana.
 # Course: DSE511 — Background Script
 
-
+# imported libraries
 from dataclasses import dataclass
 from typing import List, Dict
 
 @dataclass
 class Profile:
     name: str
+    program: str
     roles: List[str]
     interests: List[str]
     skills: Dict[str, int]  # 1–10 scale
@@ -44,6 +45,8 @@ def to_markdown_card(p: Profile) -> str:
     md = []
     md.append(f"# {p.name}")
     md.append('')
+    md.append(f"**Program:** {p.program}")
+    md.append('')
     md.append("**Roles:** " + ', '.join(p.roles))
     md.append("**Interests:** " + ', '.join(p.interests))
     md.append('')
@@ -63,21 +66,22 @@ def to_markdown_card(p: Profile) -> str:
 def main():
     profile = Profile(
         name="Eric Opoku",
-        roles=["Graduate Research Assistant", "Data Science & Engineering"],
+        program="Data Science & Engineering",
+        roles=["Graduate Research Assistant"],
         interests=[
             "Computer Vision for health and traffic safety",
             "Cocoa quality (agriculture)",
-            "Resource‑aware multimodal AI",
+            "Resource-aware multimodal AI",
         ],
         skills={
             "Python": 7, "R": 6, "SQL": 8, "PyTorch": 6, "Data Viz": 7
         },
         goals=[
             "Publish reproducible research with clear model cards",
-            "Build lightweight, interpretable models for resource‑constrained settings",
+            "Build lightweight, interpretable models for resource-constrained settings",
             "Collaborate across health, transport, and agriculture"
         ],
-        fun_fact="I built a cocoa‑bean grading AI that won an award in Ghana.",
+        fun_fact = "I built a cocoa-bean grading AI system that won an award in Ghana and was presented at a NeurIPS workshop.",
     )
 
     # A non‑trivial bit: suggest a project domain from interests
