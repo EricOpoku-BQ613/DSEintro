@@ -2,7 +2,7 @@ from typing import List, Dict
 
 
 # Name: Eric Opoku
-# Fun fact: I built a cocoa‑bean grading AI that won an award in Ghana.
+# Fun fact: I built a cocoa-bean grading AI system that won an award in Ghana and was presented at a NeurIPS workshop.
 # Course: DSE511 — Background Script
 
 # imported libraries
